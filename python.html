@@ -3,7 +3,9 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./assets/output.css" rel="stylesheet">
     <link rel="shortcut icon" href="https://storage.googleapis.com/assets-aiapply/favicon.png">
@@ -12,6 +14,10 @@
     <script src="./assets/pa-660d945edaab42001200090d.js.download" async=""></script>
     <script defer="" data-domain="aiapply.co" src="./assets/script.js.download"></script>
     <style>
+        .default-template {
+            font-family: Roboto, serif;
+            font-size: 15px;
+        }
         .list-tick {
             padding: 0;
             margin: 0;
@@ -33,6 +39,22 @@
         body .default-border {
             border-bottom: 1px solid #2F5496;
         }
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .float-left {
+            float: left;
+        }
+        @media print {
+            .page-break {
+                page-break-before: always; /* hoặc page-break-after: always; */
+            }
+            .page-break + * {
+                margin-top: 25px; /* Thêm margin phía trên phần tử tiếp theo */
+            }
+        }
     </style>
 </head>
 
@@ -48,7 +70,7 @@
             <h1 class="mb-1 text-3xl font-bold mb-3 default-primary">PHAN VĂN TÂM</h1>
         </div>
         <div class="flex justify-start gap-1 ">
-            <img style="width: 30%;" src="./assets/avatar.jpg" />
+            <img style="max-width: 30%;max-height: 200px;" src="./assets/avatar.jpg" />
             <div class="contact-info ml-5" style="font-size: 18px;">
                 <div class="flex justify-start gap-1 default-secondary items-center mb-2"> <svg
                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-5 h-5">
@@ -115,73 +137,113 @@
             <h2 class="pt-2 m-0 uppercase text-lg font-bold mb-4 default-border default-primary">Kinh nghiệm làm việc</h2>
             <div class="work experience mb-3">
                 <div class="w-full flex justify-between text-md">
-                    <div class="flex gap-1">
+                    <div class="flex gap-1 mb-1">
                         <h3 class="font-bold">Backend Developer</h3>
-                        <p class="font-bold default-secondary"> | 1OFFICE.,JSC</p>
+                        <p class="font-bold default-secondary"> | 1OFFICE., JSC</p>
                     </div>
                     <p class="font-bold">10/2023 đến 06/2024</p>
                 </div>
                 <div class="native-html default-secondary">
-                    <p class="flex gap-1">
-                        <span class="block" style="width: 225px;">&#8226; Giới thiệu:</span> 
-                        <span>Công ty Cổ phần 1Office là công ty cung cấp giải pháp quản trị tổng thể dành cho các doanh nghiệp vừa và nhỏ với đầy đủ các tính năng như: Quản lý nhân sự, quản lý khách hàng, quản lý công việc, truyền thông nội bộ.</span>
+                    <p class="clearfix">
+                        <span class="float-left" style="width: 18%;">&#8226; Giới thiệu:</span> 
+                        <span class="float-left" style="width: 82%;">Công ty Cổ phần 1Office là công ty cung cấp giải pháp quản trị tổng thể dành cho các doanh nghiệp vừa và nhỏ với đầy đủ các tính năng như: Quản lý nhân sự, quản lý khách hàng, quản lý công việc, truyền thông nội bộ.</span>
                     </p>
-                    <p class="flex gap-1">
-                        <span class="block" style="width: 150px;">&#8226; Công việc:</span> 
-                        <span></span>
+                    <p class="clearfix">
+                        <span class="float-left" style="width: 18%;">&#8226; Công việc:</span> 
+                        <span class="float-left" style="width: 82%;">Thiết kế lớp kết nối với hệ thống lưu trữ trực tuyến sử dụng giao thức S3 API như AWS S3, MinIO. Phục vụ việc chuyển đổi dữ liệu khách hàng từ lưu trữ Local Storage lên Cloud Storage.</span>
                     </p>
                 </div>
             </div>
             <div class="work experience mb-3">
                 <div class="w-full flex justify-between text-md">
-                    <div class="flex gap-1">
+                    <div class="flex gap-1 mb-1">
                         <h3 class="font-bold">Development Team Lead</h3>
-                        <p class="font-bold default-secondary"> | IDC ONLINE .,JSC</p>
+                        <p class="font-bold default-secondary"> | IDC ONLINE., JSC</p>
                     </div>
                     <p class="font-bold">07/2021 đến 10/2023</p>
                 </div>
                 <div class="flex gap-1">
-                    <span class="block" style="width: 200px;">&#8226; Giới thiệu:</span> 
-                    <span>Công ty Cổ phần Công nghệ và Giải pháp trực tuyến IDC là công ty công nghệ cung cấp các dịch vụ lưu trữ dữ liệu trực tuyến trên Internet với hơn 10 năm kinh nghiệm xây dựng và phát triển.</span>
+                    <span class="float-left" style="width: 18%;">&#8226; Giới thiệu:</span>  
+                    <span class="float-left" style="width: 82%;">Công ty Cổ phần Công nghệ và Giải pháp trực tuyến IDC là công ty công nghệ cung cấp các dịch vụ lưu trữ dữ liệu trực tuyến trên Internet với hơn 10 năm kinh nghiệm xây dựng và phát triển.</span>
                 </div>
+                <div class="page-break"></div>
                 <p class="flex gap-1">
-                    <span class="block" style="width: 150px;">&#8226; Công việc:</span> 
-                    <span></span>
+                    <span class="float-left" style="width: 18%;">&#8226; Công việc:</span>
+                    <span class="float-left" style="width: 82%;">Lên kế hoạch, phân công công việc và báo cáo hàng tháng về tiến độ, tình trạng và mục tiêu của team. Tham gia lựa chọn công nghệ, quản lý hệ thống máy chủ và thiết kế kiến trúc hệ thống cho dự án.</span>
                 </p>
             </div>
             <div class="work experience mb-3">
                 <div class="w-full flex justify-between text-md">
-                    <div class="flex gap-1">
+                    <div class="flex gap-1 mb-1">
+                        <h3 class="font-bold">Backend Developer</h3>
+                        <p class="font-bold default-secondary"> | SALETICK TECHNOLOGY GROUP</p>
+                    </div>
+                    <p class="font-bold">06/2020 đến 06/2021 </p>
+                </div>
+                <p class="flex gap-1">
+                    <span class="float-left" style="width: 18%;">&#8226; Giới thiệu:</span>  
+                    <span class="float-left" style="width: 82%;">Công ty cung cấp phần mềm CRM cho nhà quản lý doanh nghiệp dược phẩm theo dõi, đánh giá, tối ưu Marketing và quản trị Sales hiệu quả, nhanh chóng.</span>
+                </p>
+                <p class="flex gap-1">
+                    <span class="float-left" style="width: 18%;">&#8226; Công việc:</span>
+                    <span class="float-left" style="width: 82%;">Tham gia xây dựng module quản lý đơn hàng và kho hàng, thực hiện kết nối với đơn vị vận chuyển VNPost và Viettel Post giúp tự động hoá quy trình. Đề xuất, quản lý triển khai phương án chuyển đổi hệ thống sang mô hình Single Page Application và API để tối ưu UI/UX, khả năng mở rộng của hệ thống.</span>
+                </p>
+            </div>
+            <div class="work experience mb-3">
+                <div class="w-full flex justify-between text-md">
+                    <div class="flex gap-1 mb-1">
                         <h3 class="font-bold">Backend Developer</h3>
                         <p class="font-bold default-secondary"> | BAOKIM</p>
                     </div>
                     <p class="font-bold">03/2020 đến 05/2020 </p>
                 </div>
                 <p class="flex gap-1">
-                    <span class="block" style="width: 275px;">&#8226; Giới thiệu:</span> 
-                    <span>Baokim là một Cổng thanh toán trực tuyến ra đời vào năm 2010, với mục đích đầu tiên là cung cấp phương tiện thanh toán trực tuyến cho khách hàng của VNP Group gồm sàn Thương mại điện tử www.vatgia.com và các nền tảng dịch vụ trực tuyến khác mà VNP Group phát triển.</span>
+                    <span class="float-left" style="width: 18%;">&#8226; Giới thiệu:</span>  
+                    <span class="float-left" style="width: 82%;">Bảo Kim là một Cổng thanh toán trực tuyến ra đời vào năm 2010, với mục đích đầu tiên là cung cấp phương tiện thanh toán trực tuyến cho khách hàng của VNP Group gồm sàn Thương mại điện tử Vatgia.com và các nền tảng dịch vụ trực tuyến khác mà VNP Group phát triển.</span>
                 </p>
                 <p class="flex gap-1">
-                    <span class="block" style="width: 150px;">&#8226; Công việc:</span> 
-                    <span></span>
+                    <span class="float-left" style="width: 18%;">&#8226; Công việc:</span>
+                    <span class="float-left" style="width: 82%;">Tham gia xây dựng hệ thống kết nối với ngân hàng và ví điện tử Bảo Kim, hỗ trợ trả góp bằng thẻ tín dụng ngân hàng hoặc thông qua đơn vị tài chính.</span>
                 </p>
             </div>
             <div class="work experience mb-3">
                 <div class="w-full flex justify-between text-md">
-                    <div class="flex gap-1">
+                    <div class="flex gap-1 mb-1">
                         <h3 class="font-bold">Backend Developer</h3>
                         <p class="font-bold default-secondary"> | VNP GROUP., JSC</p>
                     </div>
                     <p class="font-bold">02/2018 đến 02/2020</p>
                 </div>
                 <p class="flex gap-1">
-                    <span class="block" style="width: 150px;">&#8226; Giới thiệu:</span> 
-                    <span>Công ty cổ phần VNP Group là doanh nghiệp đặt nền móng cho sự phát triển của ngành thương mại điện tử tại Việt Nam. Với hệ sinh thái các dự án như Vatgia.com, Nhanh.vn, Baokim.vn</span>
+                    <span class="float-left" style="width: 18%;">&#8226; Giới thiệu:</span>  
+                    <span class="float-left" style="width: 82%;">Công ty cổ phần VNP Group là doanh nghiệp đặt nền móng cho sự phát triển của ngành thương mại điện tử tại Việt Nam. Với hệ sinh thái các dự án như Vatgia.com, Nhanh.vn, Baokim.vn</span>
                 </p>
                 <p class="flex gap-1">
-                    <span class="block" style="width: 150px;">&#8226; Công việc:</span> 
-                    <span></span>
+                    <span class="float-left" style="width: 18%;">&#8226; Công việc:</span>
+                    <span class="float-left" style="width: 82%;">Tham gia xây dựng phần mềm quản lý bán hàng và hỗ trợ bán hàng đa kênh. Thực hiện việc kết nối với các sàn TMĐT như Vatgia.com, Shopee.vn, Lazada.vn</span>
                 </p>
+            </div>
+        </div>
+        <div class="section">
+            <h2 class="pt-2 m-0 uppercase text-lg font-bold mb-4 default-border default-primary">Dự án nổi bật</h2>
+            <div class="work experience mb-3">
+                <div class="w-full flex justify-between text-md">
+                    <div class="flex gap-1 mb-1">
+                        <h3 class="font-bold">Backend Developer</h3>
+                        <p class="font-bold default-secondary"> | 1OFFICE., JSC</p>
+                    </div>
+                    <p class="font-bold">10/2023 đến 06/2024</p>
+                </div>
+                <div class="native-html default-secondary">
+                    <p class="clearfix">
+                        <span class="float-left" style="width: 18%;">&#8226; Giới thiệu:</span> 
+                        <span class="float-left" style="width: 82%;">Công ty Cổ phần 1Office là công ty cung cấp giải pháp quản trị tổng thể dành cho các doanh nghiệp vừa và nhỏ với đầy đủ các tính năng như: Quản lý nhân sự, quản lý khách hàng, quản lý công việc, truyền thông nội bộ.</span>
+                    </p>
+                    <p class="clearfix">
+                        <span class="float-left" style="width: 18%;">&#8226; Công việc:</span> 
+                        <span class="float-left" style="width: 82%;">Thiết kế lớp kết nối với hệ thống lưu trữ trực tuyến sử dụng giao thức S3 API như AWS S3, MinIO. Phục vụ việc chuyển đổi dữ liệu khách hàng từ lưu trữ Local Storage lên Cloud Storage.</span>
+                    </p>
+                </div>
             </div>
         </div>
         <div class="section">
